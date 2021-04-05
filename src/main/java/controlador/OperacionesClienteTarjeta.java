@@ -171,7 +171,7 @@ public class OperacionesClienteTarjeta {
                 if (c.getCedula() == nroCedula) {
                     sw = 1;
                     if (c.getTarjeta().getEstado().equals("ACTIVO")) {
-                        if (c.getTarjeta().getSaldo() > monto) {
+                        if (c.getTarjeta().getSaldo() >= monto) {
                             double saldo = c.getTarjeta().getSaldo();
                             saldo = saldo - monto;
                             c.getTarjeta().setSaldo(saldo);
